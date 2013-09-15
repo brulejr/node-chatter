@@ -34,7 +34,7 @@ grunt
 * Start the application.
 
 ```
-node app.js
+npm start
 ```
 
 * To just run jshint and tests

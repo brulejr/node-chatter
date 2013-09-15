@@ -8,13 +8,13 @@ block body
     div#room
     div#room-list
     div#messages
-  form#send-form
-    input#send-message
-    input#send-button(type='submit', value='Send')
-    div#help Chat commands:
-      ul
-        li Change nickname: <code>/nick [username]</code>
-        li Join/create room: <code>/join [room name]</code>
+    form#send-form
+      input#send-message
+      input#send-button(type='submit', value='Send')
+      div#help Chat commands:
+        ul
+          li Change nickname: <code>/nick [username]</code>
+          li Join/create room: <code>/join [room name]</code>
   script(type='text/javascript', src='/socket.io/socket.io.js')
   script(type='text/javascript', src='/js/chat.js')
   script(type='text/javascript', src='/js/chat_ui.js')
