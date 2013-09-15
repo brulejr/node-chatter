@@ -10,4 +10,11 @@
 
   var controllers = angular.module('app.controllers', []);
 
+  controllers.controller('ChatCtrl', function($scope) {
+
+    var socket = io.connect();
+  	var chatApp = new Chat(socket);
+
+  });
+
 }());

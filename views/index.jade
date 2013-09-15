@@ -4,7 +4,7 @@ block head
   title #{t('title')} <#{env}>
   
 block body
-  div#content
+  div#content(ng-controller='ChatCtrl')
     div#room
     div#room-list
     div#messages
@@ -20,6 +20,7 @@ block body
   script(type='text/javascript', src='/js/controllers.js')
   script(type='text/javascript', src='/js/directives.js')
   script(type='text/javascript', src='/js/filters.js')
+  script(type='text/javascript', src='/js/services.js')
   script(type='text/javascript', src='/socket.io/socket.io.js')
   script(type='text/javascript', src='/js/chat.js')
   script(type='text/javascript', src='/js/chat_ui.js')
