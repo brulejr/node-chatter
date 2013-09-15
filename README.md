@@ -2,14 +2,19 @@
 
 WebSocket Chat program under hapi - based upon chart project from Node.js In Action
 
-These project include:
+This project incorporates the following technologies:
 
+* [node.js](http://nodejs.org/)
 * [hapi](http://spumko.github.io/)
-* [twitter bootstrap](http://twitter.github.com/bootstrap/)
+* [AngularJS](http://angularjs.org/)
+* [Bootstrap](http://getbootstrap.com/2.3.2/)
+
+For building, it uses:
+
 * [Grunt 0.4](http://gruntjs.com/)
 * [bower](http://bower.io/)
 
-For server side testing it uses:
+For testing, it uses:
 
 * [mocha](http://visionmedia.github.io/mocha/)
 * [chai](http://chaijs.com/)
