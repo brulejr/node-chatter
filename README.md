@@ -4,10 +4,10 @@ WebSocket Chat program under hapi - based upon chart project from Node.js In Act
 
 These project include:
 
-* [hapi](https://github.com/walmartlabs/hapi)
+* [hapi](http://spumko.github.io/)
 * [twitter bootstrap](http://twitter.github.com/bootstrap/)
 * [Grunt 0.4](http://gruntjs.com/)
-* [bower](http://twitter.github.com/bower/)
+* [bower](http://bower.io/)
 
 For server side testing it uses:
 
