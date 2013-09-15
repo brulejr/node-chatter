@@ -5,16 +5,22 @@ block head
   
 block body
   div#content(ng-controller='ChatCtrl')
-    div#room
+    div#room {{currentRoom}}
     div#room-list
+        div(ng-repeat="room in roomList") {{room}}
     div#messages
-    form#send-form
-      input#send-message
-      input#send-button(type='submit', value='#{t("send-button")}')
-      div#help #{t('help.title')}
-        ul
-          li #{t('help.nickname')} <code>/nick [username]</code>
-          li #{t('help.room')} <code>/join [room name]</code>
+      div(ng-repeat="message in messages") {{message}}
+    form#send-form(name="ChatForm")
+      div.control-group
+        div.controls
+          input(name="message", type="text", ng-model="chatForm.message", placeholder="#{t('ChatForm.messagePlaceholder')}")
+      div.control-group
+        div.controls
+          button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
+    div#help #{t('help.title')}
+      ul
+        li #{t('help.nickname')} <code>/nick [username]</code>
+        li #{t('help.room')} <code>/join [room name]</code>
   script(type='text/javascript', src='/vendor/angularjs/1.0.7/js/angular.js')
   script(type='text/javascript', src='/js/app.js')
   script(type='text/javascript', src='/js/controllers.js')
@@ -23,4 +29,3 @@ block body
   script(type='text/javascript', src='/js/services.js')
   script(type='text/javascript', src='/socket.io/socket.io.js')
   script(type='text/javascript', src='/js/chat.js')
-  script(type='text/javascript', src='/js/chat_ui.js')

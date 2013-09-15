@@ -5,6 +5,11 @@
   "send-button": "Send",
   "title": "Chatter",
 
+  "ChatForm": {
+  	"btnSubmit": "Send",
+  	"messagePlaceholder": "Message"
+  },
+
   "help": {
   	"title": "Chat commands:",
   	"nickname": "Change nickname:",

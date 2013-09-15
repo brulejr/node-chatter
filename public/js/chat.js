@@ -17,9 +17,9 @@ Chat.prototype.changeRoom = function(room) {
 };
 
 Chat.prototype.processCommand = function(command) {
-  var words = command.split(' ')
-    , command = words[0].substring(1, words[0].length).toLowerCase()
-    , message = false;
+  var words = command.split(' '), 
+      command = words[0].substring(1, words[0].length).toLowerCase(), 
+      message = false;
 
   switch(command) {
     case 'join':
