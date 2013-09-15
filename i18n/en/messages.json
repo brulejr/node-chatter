@@ -1,7 +1,10 @@
 {
 
-  "title": "Chatter",
+  "about": "About",
+  "appname": "node-chatter",
   "send-button": "Send",
+  "title": "Chatter",
+
   "help": {
   	"title": "Chat commands:",
   	"nickname": "Change nickname:",
