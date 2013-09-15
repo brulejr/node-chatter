@@ -1,5 +1,11 @@
 {
 
-  "title": "Chatter"
+  "title": "Chatter",
+  "send-button": "Send",
+  "help": {
+  	"title": "Chat commands:",
+  	"nickname": "Change nickname:",
+  	"room": "Join/create room:"
+  }
 
 }
