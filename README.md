@@ -1,4 +1,4 @@
-# chat
+# node-chatter
 
 WebSocket Chat program under hapi - based upon chart project from Node.js In Action
 
