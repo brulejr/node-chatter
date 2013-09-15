@@ -27,7 +27,7 @@
       if (result.success) {
         $rootScope.$broadcast('NameChangeEvent', result.name);
       } else {
-        $rootScope.$broadcast('ErrorEvent', result.message);
+        $rootScope.$broadcast('NameInUseEvent', result.message);
       }
     });
 

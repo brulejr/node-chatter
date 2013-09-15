@@ -12,6 +12,7 @@
 
   controllers.controller('ChatCtrl', function($scope, chatService) {
 
+    $scope.currentName = "";
     $scope.currentRoom = "";
     $scope.messages = [ ];
     $scope.roomList = [ ];
@@ -26,7 +27,7 @@
     		chatService.sendCommand(message);
       } else {
     		chatService.sendMessage($scope.currentRoom, message);
-    		$scope.messages.push(message);
+    		$scope.messages.push($scope.currentName + ': ' + message);
       }
   	  $scope.chatForm.message = "";
 	  };
@@ -41,7 +42,8 @@
     });
 
     $scope.$on('NameChangeEvent', function(event, name) {
-    	console.log('NameChangeEvent', name);
+      $scope.currentName = name;
+      $scope.$apply();
     });
 
     $scope.$on('RoomsEvent', function(event, rooms) {

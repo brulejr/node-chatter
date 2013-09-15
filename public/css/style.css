@@ -25,6 +25,9 @@ a {
   background-color: #eee;
   margin-bottom: 1em;
   margin-right: 10px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
 }
 
 #room-list {
@@ -43,9 +46,7 @@ a {
 }
 
 #send-message {
-  width: 700px;
-  margin-bottom: 1em;
-  margin-right: 1em;
+  width: 586px;
 }
 
 #help {

@@ -5,18 +5,16 @@ block head
   
 block body
   div#content(ng-controller='ChatCtrl')
-    div#room {{currentRoom}}
+    div#room {{currentName}}@{{currentRoom}}
     div#room-list
         div(ng-repeat="room in roomList") {{room}}
     div#messages
       div(ng-repeat="message in messages") {{message}}
-    form#send-form(name="ChatForm")
-      div.control-group
-        div.controls
-          input(name="message", type="text", ng-model="chatForm.message", placeholder="#{t('ChatForm.messagePlaceholder')}")
-      div.control-group
-        div.controls
-          button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
+    form#send-form.form-inline(name="ChatForm")
+      div.input-prepend
+        span.add-on @
+        input#send-message(name="message", type="text", ng-model="chatForm.message", placeholder="#{t('ChatForm.messagePlaceholder')}")
+      button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
     div#help #{t('help.title')}
       ul
         li #{t('help.nickname')} <code>/nick [username]</code>
