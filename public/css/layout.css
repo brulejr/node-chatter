@@ -6,9 +6,31 @@ body {
 }
 
 #content {
-  width: 800px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#content>header {
+	margin-bottom: -2px;
+}
+#content>header>.navbar-inner {
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+#content>footer {
+	padding-top: 5px;
+	text-align: center;
+}
+
+#content>section {
+	padding-top: 10px;
+	border: 1px solid #999999;
+	border-top: none;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 #room {
@@ -16,20 +38,29 @@ body {
 }
 
 #messages {
-  width: 690px;
+  width: 680px;
   height: 300px;
   overflow: auto;
-  margin-bottom: 1em;
+  margin-left: 10px;
+  margin-bottom: 10px;
   margin-right: 10px;
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
+  padding: 10px;
+}
+
+#content>section {
+	position: relative;
 }
 
 #room-list {
-  float: right;
-  width: 100px;
-  height: 300px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+  width: 170px;
+  height: 175px;
+  padding: 10px;
   overflow: auto;
 }
 
@@ -37,6 +68,25 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+#help {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+  width: 170px;
+  height: 110	px;
+  padding: 10px;
+  overflow: auto;
+}
+
 #send-message {
-  width: 586px;
+  margin-left: 10px;
+}
+#send-message input {
+  width: 596px;
+}
+
+.aboutDialog .modal-header {
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
 }

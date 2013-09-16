@@ -3,7 +3,17 @@
   "about": "About",
   "appname": "node-chatter",
   "send-button": "Send",
-  "title": "Chatter",
+  "title": "node-chatter",
+
+  "AboutDialog": {
+    "appname": "Application",
+    "environment": "Environment",
+    "header_property": "Property",
+    "header_value": "Value",
+    "license": "License",
+    "title": "About this application...",
+    "version": "Version"
+  },
 
   "ChatForm": {
   	"btnSubmit": "Send",

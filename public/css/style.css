@@ -6,12 +6,32 @@ a {
   color: #00B7FF;
 }
 
+#content>header .navbar-inner {
+  background-color: #3b5998 !important;
+  background-image: none !important;
+  border-bottom-color: #3b5998 !important;
+}
+#content>header a {
+  color: #f7f7f7 !important;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#content>section {
+  background-color: #f7f7f7;
+}
+
 #room {
   background-color: #ddd;
 }
 
 #messages {
-  background-color: #eee;
+  background: #dfe3ee;
 }
 
 #room-list div {
@@ -24,4 +44,14 @@ a {
 
 #help {
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+.aboutDialog .modal-header {
+  background-color: #3b5998;
+  color: white;
+}
+
+.aboutDialog table thead {
+  background-color: #dfe3ee;
 }

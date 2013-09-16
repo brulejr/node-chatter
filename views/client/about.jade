@@ -1,0 +1,22 @@
+div.aboutDialog
+  div.modal-header
+    h4 #{t('AboutDialog.title')}
+  div.modal-body
+    table.table.table-striped
+      thead
+        tr
+          th #{t('AboutDialog.header_property')}
+          th #{t('AboutDialog.header_value')}
+      tbody 
+        tr
+          td #{t('AboutDialog.appname')}
+          td #{name}
+        tr
+          td #{t('AboutDialog.version')}
+          td #{version}
+        tr
+          td #{t('AboutDialog.environment')}
+          td #{env}
+        tr
+          td #{t('AboutDialog.license')}
+          td #{licenses[0].type}

@@ -12,7 +12,9 @@
 	  'app.controllers',
 	  'app.directives',
 	  'app.filters',
-	  'app.services'
+	  'app.services',
+	  'ui.bootstrap', 
+	  'ui.utils'
   ]);
 
 }());

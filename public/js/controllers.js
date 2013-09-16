@@ -10,7 +10,7 @@
 
   var controllers = angular.module('app.controllers', []);
 
-  controllers.controller('PageCtrl', function($scope, chatService) {
+  controllers.controller('PageCtrl', function($scope, $dialog, chatService) {
 
     $scope.currentName = "";
     $scope.currentRoom = "";
@@ -37,6 +37,20 @@
       if (room !== $scope.currentRoom) {
         chatService.joinRoom(room);
       }
+    };
+
+    $scope.openAboutDialog = function() {
+      var d = $dialog.dialog({
+        backdrop: true,
+        keyboard: true,
+        backdropClick: true,
+        templateUrl: '/view/about'
+      });
+      d.open();
+    };
+  
+    $scope.closeDialog = function(result) {
+      dialog.close(result);
     };
 
     $scope.$on('JoinRoomEvent', function(event, room) {
