@@ -23,7 +23,7 @@ block body
       li #{t('help.nickname')} <code>/nick [username]</code>
       li #{t('help.room')} <code>/join [room name]</code>
   div#messages
-    div(ng-repeat="message in messages") {{message}}
+    div(ng-repeat="message in messages", id="msg{{message.id}}") {{message.text}}
   form#send-form.form-inline(name="ChatForm")
     div#send-message.input-prepend
       span.add-on @

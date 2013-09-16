@@ -10,7 +10,7 @@
 
   var controllers = angular.module('app.controllers', []);
 
-  controllers.controller('PageCtrl', function($scope, $dialog, chatService) {
+  controllers.controller('PageCtrl', function($scope, $dialog, $location, $anchorScroll, chatService) {
 
     $scope.currentName = "";
     $scope.currentRoom = "";
@@ -22,13 +22,15 @@
     	message: ""
     };
 
+    var msgnum = 1;
+
     $scope.handleUserInput = function() {
     	var message = $scope.chatForm.message;
     	if (message[0] == '/') {
     		chatService.sendCommand(message);
       } else {
     		chatService.sendMessage($scope.currentRoom, message);
-    		$scope.messages.push($scope.currentName + ': ' + message);
+        pushMessage($scope.currentName + ': ' + message);
       }
   	  $scope.chatForm.message = "";
 	  };
@@ -53,13 +55,20 @@
       dialog.close(result);
     };
 
+    var pushMessage = function(message) {
+      $scope.messages.push({ id: ++msgnum, text: message });
+      $location.hash('msg' + msgnum);
+      $anchorScroll();
+    }
+
     $scope.$on('JoinRoomEvent', function(event, room) {
     	$scope.currentRoom = room;
     	$scope.$apply();
     });
 
     $scope.$on('MessageEvent', function(event, message) {
-    	$scope.messages.push(message);
+      pushMessage(message);
+      $scope.$apply();
     });
 
     $scope.$on('NameChangeEvent', function(event, name) {
