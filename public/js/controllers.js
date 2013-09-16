@@ -10,7 +10,7 @@
 
   var controllers = angular.module('app.controllers', []);
 
-  controllers.controller('ChatCtrl', function($scope, chatService) {
+  controllers.controller('PageCtrl', function($scope, chatService) {
 
     $scope.currentName = "";
     $scope.currentRoom = "";

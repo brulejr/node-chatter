@@ -6,7 +6,7 @@ html(ng-app="app")
     link(rel='stylesheet', href='/css/style.css')
     block head
   body
-    div#page
+    div#content(ng-controller='PageCtrl')
       header
         block header
       section

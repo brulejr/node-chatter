@@ -1,0 +1,42 @@
+html, body {
+}
+
+body {
+  padding: 50px;
+}
+
+#content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#room {
+  margin-bottom: 1em;
+}
+
+#messages {
+  width: 690px;
+  height: 300px;
+  overflow: auto;
+  margin-bottom: 1em;
+  margin-right: 10px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+#room-list {
+  float: right;
+  width: 100px;
+  height: 300px;
+  overflow: auto;
+}
+
+#room-list div {
+  border-bottom: 1px solid #eee;
+}
+
+#send-message {
+  width: 586px;
+}

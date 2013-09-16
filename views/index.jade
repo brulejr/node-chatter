@@ -4,21 +4,20 @@ block head
   title #{t('title')} <#{env}>
   
 block body
-  div#content(ng-controller='ChatCtrl')
-    div#room {{currentName}}@{{currentRoom}}
-    div#room-list
-        div(ng-repeat="room in roomList", ng-click="joinRoom('{{room}}')") {{room}}
-    div#messages
-      div(ng-repeat="message in messages") {{message}}
-    form#send-form.form-inline(name="ChatForm")
-      div.input-prepend
-        span.add-on @
-        input#send-message(name="message", type="text", ng-model="chatForm.message", focus="{{hasFocus}}", placeholder="#{t('ChatForm.messagePlaceholder')}")
-      button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
-    div#help #{t('help.title')}
-      ul
-        li #{t('help.nickname')} <code>/nick [username]</code>
-        li #{t('help.room')} <code>/join [room name]</code>
+  div#room {{currentName}}@{{currentRoom}}
+  div#room-list
+    div(ng-repeat="room in roomList", ng-click="joinRoom('{{room}}')") {{room}}
+  div#messages
+    div(ng-repeat="message in messages") {{message}}
+  form#send-form.form-inline(name="ChatForm")
+    div.input-prepend
+      span.add-on @
+      input#send-message(name="message", type="text", ng-model="chatForm.message", focus="{{hasFocus}}", placeholder="#{t('ChatForm.messagePlaceholder')}")
+    button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
+  div#help #{t('help.title')}
+    ul
+      li #{t('help.nickname')} <code>/nick [username]</code>
+      li #{t('help.room')} <code>/join [room name]</code>
   script(type='text/javascript', src='/vendor/angularjs/1.2.0-rc2/js/angular.js')
   script(type='text/javascript', src='/js/app.js')
   script(type='text/javascript', src='/js/controllers.js')
