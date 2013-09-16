@@ -45,6 +45,10 @@
       socket.emit('rooms');
     }, 1000);
 
+    var joinRoomImpl = function(room) {
+      chatApp.processCommand('/join ' + room);
+    };
+
     var sendCommandImpl = function(command) {
     	chatApp.processCommand(command);
     };
@@ -54,6 +58,7 @@
     };
 
     return {
+      joinRoom: joinRoomImpl,
     	sendCommand: sendCommandImpl,
     	sendMessage: sendMessageImpl
     }

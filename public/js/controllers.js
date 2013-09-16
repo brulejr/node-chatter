@@ -33,6 +33,12 @@
   	  $scope.chatForm.message = "";
 	  };
 
+    $scope.joinRoom = function(room) {
+      if (room !== $scope.currentRoom) {
+        chatService.joinRoom(room);
+      }
+    };
+
     $scope.$on('JoinRoomEvent', function(event, room) {
     	$scope.currentRoom = room;
     	$scope.$apply();

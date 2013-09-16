@@ -7,7 +7,7 @@ block body
   div#content(ng-controller='ChatCtrl')
     div#room {{currentName}}@{{currentRoom}}
     div#room-list
-        div(ng-repeat="room in roomList") {{room}}
+        div(ng-repeat="room in roomList", ng-click="joinRoom('{{room}}')") {{room}}
     div#messages
       div(ng-repeat="message in messages") {{message}}
     form#send-form.form-inline(name="ChatForm")
