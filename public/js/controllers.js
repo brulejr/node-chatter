@@ -16,6 +16,7 @@
     $scope.currentRoom = "";
     $scope.messages = [ ];
     $scope.roomList = [ ];
+    $scope.hasFocus = true;
 
     $scope.chatForm = {
     	message: ""

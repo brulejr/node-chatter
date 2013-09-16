@@ -13,7 +13,7 @@ block body
     form#send-form.form-inline(name="ChatForm")
       div.input-prepend
         span.add-on @
-        input#send-message(name="message", type="text", ng-model="chatForm.message", placeholder="#{t('ChatForm.messagePlaceholder')}")
+        input#send-message(name="message", type="text", ng-model="chatForm.message", focus="{{hasFocus}}", placeholder="#{t('ChatForm.messagePlaceholder')}")
       button.btn_submit.btn.btn-primary(ng-click='handleUserInput()') #{t('ChatForm.btnSubmit')}
     div#help #{t('help.title')}
       ul
