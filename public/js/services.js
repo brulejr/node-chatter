@@ -20,7 +20,7 @@
     });
 
     socket.on('message', function (message) {
-      $rootScope.$broadcast('MessageEvent', message.text);
+      $rootScope.$broadcast('MessageEvent', message);
     });
 
     socket.on('nameResult', function(result) {

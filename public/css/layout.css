@@ -49,6 +49,9 @@ body {
   border-radius: 6px 6px 6px 6px;
   padding: 10px;
 }
+#messages div {
+  padding-bottom: 3px;
+}
 
 #content>section {
 	position: relative;

@@ -30,7 +30,7 @@
     		chatService.sendCommand(message);
       } else {
     		chatService.sendMessage($scope.currentRoom, message);
-        pushMessage($scope.currentName + ': ' + message);
+        pushMessage({ text: $scope.currentName + ': ' + message });
       }
   	  $scope.chatForm.message = "";
 	  };
@@ -56,7 +56,12 @@
     };
 
     var pushMessage = function(message) {
-      $scope.messages.push({ id: ++msgnum, text: message });
+      $scope.messages.push({ 
+        id: ++msgnum, 
+        text: message.text, 
+        color: message.color, 
+        type: message.type 
+      });
       $location.hash('msg' + msgnum);
       $anchorScroll();
     }

@@ -1,4 +1,5 @@
 body {
+  background-color: #BAD3D9;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -35,6 +36,12 @@ a {
   background-color: #f7f7f7;
 }
 
+#content>footer .muted {
+  color: #3b5998;
+  font-style: italic;
+  font-size: small;
+}
+
 #room {
   background-color: #ddd;
 }
@@ -47,6 +54,10 @@ a {
   -moz-user-select: -moz-text;
   -ms-user-select: text;
   user-select: text;
+}
+#messages .system {
+  color: #3b5998;
+  font-style: italic;
 }
 
 #room-list div {
