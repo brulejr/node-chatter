@@ -2,7 +2,7 @@
 
 WebSocket Chat program under hapi - based upon chart project from Node.js In Action
 
-This project incorporates the following technologies:
+This POC project incorporates the following technologies:
 
 * [node.js](http://nodejs.org/)
 * [hapi](http://spumko.github.io/)
